@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f6f7f3">
+<meta name="description" content="ScamMirror AI helps inspect suspicious messages and share emerging scam patterns.">
+<title>ScamMirror AI — Trust, but verify.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar">
+ <a class="brand" href="#"><span class="brand-mark">◈</span><span>scam<span class="brand-ai">mirror</span><sup>AI</sup></span></a>
+ <div class="workspace-label">WORKSPACE</div>
+ <nav class="side-nav">
+  <a class="nav-active" href="#overview"><span>▦</span> Overview <i></i></a>
+  <a href="#checker"><span>⌕</span> Check a message</a>
+  <a href="#community"><span>◎</span> Community signals</a>
+  <a href="#how"><span>↗</span> How it works</a>
+ </nav>
+ <div class="sidebar-spacer"></div>
+ <div class="sidebar-protection"><div class="protection-icon">✳</div><strong>Pause before you pay.</strong><p>Scams can target anyone. A second look can help.</p><a href="#checker">Check something →</a></div>
+ <div class="sidebar-footer"><span class="avatar">S</span><div><strong>ScamMirror</strong><small>Community safety workspace</small></div><span class="more">···</span></div>
+</aside>
+<main class="main-area" id="overview">
+ <header class="page-header"><div><div class="breadcrumb">WORKSPACE <span>/</span> OVERVIEW</div><h1>Your safety dashboard<span class="period">.</span></h1><p class="header-sub">One screening workspace for suspicious messages, links, impersonation, unsafe downloads and social engineering.</p></div><div class="header-actions"><div class="system-status" id="systemStatus"><span class="system-dot"></span><span id="systemStatusText">Connecting…</span></div><a class="header-button" href="#checker">＋ New scan</a></div></header>
+ <section class="welcome-strip"><div><div class="welcome-kicker"><span class="pulse"></span> YOUR DIGITAL SECOND OPINION</div><h2>Something doesn't feel right?</h2><p>Bring the message. We’ll help you inspect the signals — even if it’s the first time anyone has seen it.</p><a href="#checker" class="welcome-link">Analyze a message <span>↗</span></a></div><div class="welcome-art"><div class="art-orbit orbit1"></div><div class="art-orbit orbit2"></div><div class="shield-art">✓</div><span class="art-tag tag-a">AI analysis</span><span class="art-tag tag-b">First-seen aware</span></div></section>
+ <section class="metric-grid">
+  <article class="metric-card"><div class="metric-top"><span>01 / DETECTION</span><span class="metric-icon green">⌕</span></div><strong>Message-first</strong><p>Screen multiple cyber-threat patterns, including first-seen messages.</p><div class="metric-bottom"><span class="mini-dot green-dot"></span> Content signals</div></article>
+  <article class="metric-card"><div class="metric-top"><span>02 / EXPLANATION</span><span class="metric-icon violet">✳</span></div><strong>Understand why</strong><p>See the specific wording and behaviours that raised concern.</p><div class="metric-bottom"><span class="mini-dot violet-dot"></span> Explainable results</div></article>
+  <article class="metric-card"><div class="metric-top"><span>03 / COMMUNITY</span><span class="metric-icon amber">◎</span></div><strong>Learn together</strong><p>Compare emerging patterns, without treating reports as proof.</p><div class="metric-bottom"><span class="mini-dot amber-dot"></span> Shared signals</div></article>
+ </section>
+ <section class="coverage-section" aria-label="Threat coverage"><div class="coverage-heading"><div><div class="eyebrow">MULTI-THREAT SCREENING <span class="eyebrow-line"></span></div><h2>More than money scams.</h2><p>One analyzer checks for patterns across common cyber threats. Each result explains what triggered the warning.</p></div><span class="coverage-note">Message + URL signals</span></div><div class="coverage-grid"><article><span class="coverage-icon">⌁</span><strong>Phishing & impersonation</strong><small>Fake bank, account and official alerts</small></article><article><span class="coverage-icon">⌘</span><strong>Malware & downloads</strong><small>Risky APKs, files and execution requests</small></article><article><span class="coverage-icon">◉</span><strong>Fake technical support</strong><small>Remote access and screen-sharing pressure</small></article><article><span class="coverage-icon">▤</span><strong>Identity theft</strong><small>OTP, password and identity-data requests</small></article><article><span class="coverage-icon">↗</span><strong>Jobs, shopping & investment</strong><small>Advance fees, fake refunds and unrealistic returns</small></article><article><span class="coverage-icon">!</span><strong>Social engineering & extortion</strong><small>Threats, secrecy, manipulation and blackmail</small></article></div><p class="coverage-disclaimer">Coverage is based on heuristic and optional AI analysis; it cannot guarantee detection of every attack or confirm malware without dedicated scanning.</p></section>
+ <section class="work-section" id="checker"><div class="section-title-row"><div><div class="eyebrow">MESSAGE INSPECTOR <span class="eyebrow-line"></span></div><h2>Run a safety check</h2><p>Analyze message text and an optional URL. Remove private details first.</p></div><div class="step-pill"><span>STEP 1</span> Inspect</div></div>
+  <div class="checker-grid">
+   <div class="panel input-panel"><div class="panel-title"><div class="step-number">01</div><div><h3>What did they send you?</h3><p>SMS, email, job offer, marketplace chat or payment request.</p></div></div>
+    <label for="messageInput">MESSAGE CONTENT</label><textarea id="messageInput" maxlength="6000" placeholder="Paste the suspicious message here…&#10;&#10;Example: You have been selected for a remote job. Pay ₹499 registration fee to receive your joining letter."></textarea>
+    <div class="input-meta"><span id="charCount">0 / 6000</span><button class="subtle-button" id="exampleButton">Load investment sample ↗</button></div>
+    <label for="sampleScenario">QUICK TEST SCENARIO</label><select id="sampleScenario" class="scenario-select"><option value="">Choose a sample to test…</option><option value="phishing">Phishing / fake bank alert</option><option value="malware">Suspicious APK / download</option><option value="support">Fake tech support / remote access</option><option value="job">Fake job offer</option><option value="investment">Investment scam</option><option value="shopping">Shopping / refund scam</option><option value="extortion">Blackmail / sextortion</option></select>
+    <label for="urlInput" class="url-label">LINK TO CHECK <span>(OPTIONAL)</span></label><div class="url-input-wrap"><span>↗</span><input id="urlInput" type="url" placeholder="https://suspicious-link.example" autocomplete="off"></div>
+    <div class="privacy-note"><span>◇</span><span><strong>Protect your privacy.</strong> Never paste passwords, OTPs, bank details or private identifiers.</span></div>
+    <button class="button button-primary analyze-button" id="analyzeButton"><span class="button-label">Analyze risk signals</span><span class="button-arrow">→</span></button><div class="error-message" id="formError" role="alert"></div>
+   </div>
+   <div class="panel result-panel" id="resultPanel"><div class="result-heading"><div><div class="eyebrow">ANALYSIS REPORT</div><h3>Risk assessment</h3></div><span class="report-badge">● READY</span></div>
+    <div class="empty-state" id="emptyState"><div class="empty-graphic"><div class="empty-ring"></div><span>⌕</span></div><h3>Your report will appear here</h3><p>We inspect phishing, identity theft, fake support, suspicious downloads, social engineering, investment and shopping scams, extortion, and risky URLs.</p><div class="empty-tags"><span>Risk signals</span><span>Evidence</span><span>Next steps</span></div></div>
+    <div class="result-content hidden" id="resultContent" aria-live="polite"></div>
+   </div>
+  </div>
+ </section>
+ <section class="community-section" id="community"><div class="section-title-row"><div><div class="eyebrow">COMMUNITY INTELLIGENCE <span class="eyebrow-line"></span></div><h2>Signals worth a second look</h2><p>Shared reports help spot repeats. They are unverified clues, not accusations.</p></div><div class="step-pill">LIVE FEED <span class="feed-count" id="feedCount">3 signals</span></div></div>
+  <div class="community-toolbar"><div class="feed-title"><span class="live-dot"></span><strong>Emerging patterns</strong><span class="feed-count">Community feed</span></div><div class="feed-controls"><label class="sr-only" for="feedFilter">Filter reports</label><select id="feedFilter"><option value="all">All patterns</option><option value="job">Job offers</option><option value="payment">Payment requests</option><option value="link">Suspicious links</option><option value="phishing">Phishing</option><option value="malware">Malware risk</option><option value="tech-support">Fake tech support</option><option value="identity">Identity theft</option><option value="investment">Investment</option><option value="shopping">Shopping / refund</option><option value="social-engineering">Social engineering</option><option value="extortion">Blackmail / extortion</option><option value="delivery">Delivery scams</option><option value="other">Other cyber safety</option></select><button class="subtle-button" id="clearReportsButton">Reset demo</button></div></div>
+  <div class="pattern-grid" id="patternGrid"></div><p class="feed-disclaimer">Demo examples are illustrative. Community submissions are not independently verified.</p>
+ </section>
+ <section class="how-section" id="how"><div class="eyebrow">DESIGNED FOR THE FIRST PERSON, TOO <span class="eyebrow-line"></span></div><h2>A new threat shouldn't need an old report.</h2><div class="how-grid"><article class="how-card"><div class="how-num">01</div><div class="how-icon">⌕</div><h3>Inspect the message</h3><p>Inspect message wording and URL signals even when there are zero community reports.</p></article><article class="how-card"><div class="how-num">02</div><div class="how-icon">✳</div><h3>Explain the evidence</h3><p>Explain the evidence and suggest a safer next step for the relevant threat type.</p></article><article class="how-card"><div class="how-num">03</div><div class="how-icon">◎</div><h3>Connect the dots</h3><p>Group similar reports to reveal possible patterns while keeping uncertainty visible.</p></article></div></section>
+ <footer class="page-footer"><a class="brand footer-brand" href="#"><span class="brand-mark">◈</span><span>scam<span class="brand-ai">mirror</span><sup>AI</sup></span></a><span>Pause. Check. Protect.</span><span>Screening aid · not a definitive verdict</span></footer>
+</main>
+</div><div class="toast" id="toast" role="status"></div><script src="detector.js"></script><script src="app.js"></script>
+</body></html>
