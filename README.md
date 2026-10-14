@@ -19,7 +19,7 @@ Instead of presenting only a risk score, ScamMirror explains *why* a message loo
 
 Built as a responsive hackathon prototype, the project combines transparent local detection rules with optional server-side Google Gemini analysis.
 
-Live demo:
+Live demo:https://scammirror-ai.onrender.com/
 
 ## ✨ Key Features
 
